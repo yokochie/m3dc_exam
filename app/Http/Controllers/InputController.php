@@ -8,7 +8,10 @@ class InputController extends Controller
 {
     public function index()
     {
-        return view('viewpages.input');
+        $defaultcfg = config('defaultcfg.defaultcfg');
+        return view('viewpages.input', [
+            'title' => $defaultcfg['PAGE_TITLE'],
+            'config' => $defaultcfg ]);
     }
     
     public function displayview()
