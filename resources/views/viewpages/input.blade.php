@@ -35,7 +35,7 @@
                             	<div class="panel-heading">{{ $config['INPUT_TITLE'] }}</div>
                         		<div class="panel-body">
 
-                        			<form id="nameForm" class="form-horizontal" role="form" method="post" action="viewpage">
+                        			<form id="nameForm" class="form-horizontal" role="form" method="post" action="store">
 										{{ csrf_field() }}
                             			<div class="form-group">
                             				<label class="col-md-2 control-label" >都道府県</label>
