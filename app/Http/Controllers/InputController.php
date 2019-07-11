@@ -11,16 +11,28 @@ class InputController extends Controller
     public function index()
     {
         $defaultcfg = config('defaultcfg.defaultcfg');
-        return view('viewpages.input', [
+        $layout_config = array(
             'title' => $defaultcfg['PAGE_TITLE'],
+            'navbar_url' => $defaultcfg['M3DC_URL'],
+            'navbar_txt' => $defaultcfg['M3DC_LOG_TXT']
+        );
+
+        return view('viewpages.input', [
+            'layout_config' => $layout_config,
             'config' => $defaultcfg ]);
     }
     
     public function displayview()
     {
         $defaultcfg = config('defaultcfg.defaultcfg');
-        return view('viewpages.viewpage', [
+        $layout_config = array(
             'title' => $defaultcfg['PAGE_TITLE'],
+            'navbar_url' => $defaultcfg['M3DC_URL'],
+            'navbar_txt' => $defaultcfg['M3DC_LOG_TXT']
+        );
+
+        return view('viewpages.viewpage', [
+            'layout_config' => $layout_config,
             'config' => $defaultcfg ]);
     }
 
