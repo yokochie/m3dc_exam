@@ -16,6 +16,9 @@ class InputController extends Controller
     
     public function displayview()
     {
-        return view('viewpages.viewpage');
+        $defaultcfg = config('defaultcfg.defaultcfg');
+        return view('viewpages.viewpage', [
+            'title' => $defaultcfg['PAGE_TITLE'],
+            'config' => $defaultcfg ]);
     }
 }
